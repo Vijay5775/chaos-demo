@@ -10,7 +10,7 @@ RUN apt-get upgrade -y \
 RUN apt-get install -y apt-transport-https ca-certificates gnupg-agent \
 RUN echo "deb https://deb.gremlin.com/ release non-free" > /etc/apt/sources.list.d/gremlin.list \
 RUN echo "deb https://download.docker.com/linux/ubuntu bionic stable" > /etc/apt/sources.list.d/docker.list \
-RUN apt-key adv --keyserver keyserver.ubuntu.com --recv-keys \
+RUN apt-key add --keyserver keyserver.ubuntu.com --recv-keys \
          # Docker
          7EA0A9C3F273FCD8 \
          # Gremlin
